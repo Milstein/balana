@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.wso2.balana</groupId>
         <artifactId>balana</artifactId>
-        <version>1.0.4-SNAPSHOT</version>
+        <version>1.0.5-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -24,6 +24,10 @@
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>xerces.wso2</groupId>
+            <artifactId>xercesImpl</artifactId>
         </dependency>
     </dependencies>
 
@@ -63,6 +67,8 @@
                             javax.xml.transform.dom; version="${imp.pkg.version.javax.xml}",
                             javax.xml.transform.stream; version="${imp.pkg.version.javax.xml}",
                             org.apache.commons.logging; version="${commons-logging.osgi.version.range}",
+                            org.apache.xerces.impl; resolution:=optional,
+                            org.apache.xerces.util; resolution:=optional,
                             org.w3c.dom
                         </Import-Package>
                     </instructions>
