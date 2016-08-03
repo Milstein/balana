@@ -8,7 +8,7 @@
                 <AllOf>
                     <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
                         <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Computer Science</AttributeValue>
-                        <AttributeDesignator Category="urn:oasis:names:tc:xacml:3.0:attribute-category:delegated:urn:oasis:names:tc:xacml:1.0:subject-category:access-subject " AttributeId="group" MustBePresent="false" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                        <AttributeDesignator Category="urn:oasis:names:tc:xacml:3.0:attribute-category:delegated:urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="group" MustBePresent="false" DataType="http://www.w3.org/2001/XMLSchema#string"/>
                     </Match>
                 </AllOf>
             </AnyOf>
