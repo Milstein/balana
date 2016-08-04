@@ -81,12 +81,18 @@
 				</ak:patient>
 			</ak:record>
 		</Content>
-		<Attribute IncludeInResult="true"
+		<Attribute IncludeInResult="false"
 			AttributeId="urn:oasis:names:tc:xacml:3.0:profile:multiple:content-selector">
-			<AttributeValue
+		<AttributeValue
 				XPathCategory="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
 				DataType="urn:oasis:names:tc:xacml:3.0:data-type:xpathExpression">//ak:record//ak:patient</AttributeValue>
 		</Attribute>
+<!-- 		<Attribute IncludeInResult="true" -->
+<!-- 			AttributeId="urn:oasis:names:tc:xacml:3.0:profile:multiple:content-selector"> -->
+<!-- 			<AttributeValue -->
+<!-- 				XPathCategory="urn:oasis:names:tc:xacml:3.0:attribute-category:resource" -->
+<!-- 				DataType="urn:oasis:names:tc:xacml:3.0:data-type:xpathExpression">//ak:record//ak:patient</AttributeValue> -->
+<!-- 		</Attribute> -->
 	</Attributes>
 	<Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
 		<Attribute IncludeInResult="false"

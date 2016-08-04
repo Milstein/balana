@@ -47,11 +47,38 @@
                     <AttributeSelector MustBePresent="false"
                             ContextSelectorId="urn:oasis:names:tc:xacml:3.0:content-selector"
                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
-                            Path="/ak:patient/ak:patientContact/ak:email/text()"
+                            Path="//ak:patient/ak:patientContact/ak:email/text()"
                             DataType="http://www.w3.org/2001/XMLSchema#string"/>
                 </Apply>
             </Apply>
         </Condition>
+        <ObligationExpressions>
+	      <ObligationExpression ObligationId="sendAlert" FulfillOn="Permit">
+	        <AttributeAssignmentExpression AttributeId="obligationType">
+	          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">preobligation</AttributeValue>
+	        </AttributeAssignmentExpression>
+	        <AttributeAssignmentExpression AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:text">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeSelector MustBePresent="false"
+                                           ContextSelectorId="urn:oasis:names:tc:xacml:3.0:content-selector"
+                                           Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                           Path="//ak:patient/ak:patientId/text()"
+                                           DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                    </Apply>
+            </AttributeAssignmentExpression>
+	        <AttributeAssignmentExpression AttributeId="patientId">
+	          	<AttributeSelector MustBePresent="false"
+                                           ContextSelectorId="urn:oasis:names:tc:xacml:3.0:content-selector"
+                                           Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                           Path="//ak:patient/ak:patientId/text()"
+                                           DataType="http://www.w3.org/2001/XMLSchema#string"/>
+            </AttributeAssignmentExpression>
+            <!-- Without ContextSelectorId="urn:oasis:names:tc:xacml:3.0:content-selector" it's going to bind all data from Content-->
+			<!--             <AttributeAssignmentExpression AttributeId="patientDOB">              -->
+			<!-- 	         	<AttributeSelector MustBePresent="false" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource" Path="//ak:patient/ak:patientDoB/text()" DataType="http://www.w3.org/2001/XMLSchema#string"/> -->
+			<!-- 	        </AttributeAssignmentExpression> -->
+	      </ObligationExpression>	      
+	    </ObligationExpressions>
         <AdviceExpressions>
             <AdviceExpression AdviceId="patientId" AppliesTo="Permit">
                 <AttributeAssignmentExpression AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:text">
@@ -59,7 +86,7 @@
                         <AttributeSelector MustBePresent="false"
                                            ContextSelectorId="urn:oasis:names:tc:xacml:3.0:content-selector"
                                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
-                                           Path="/ak:patient/ak:patientId/text()"
+                                           Path="//ak:patient/ak:patientId/text()"
                                            DataType="http://www.w3.org/2001/XMLSchema#string"/>
                     </Apply>
                 </AttributeAssignmentExpression>
