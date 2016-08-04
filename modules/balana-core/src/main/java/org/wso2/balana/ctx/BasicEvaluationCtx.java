@@ -419,7 +419,9 @@ public abstract class BasicEvaluationCtx implements EvaluationCtx, Cloneable {
 	 *
 	 */
 	public void createReductionGraph() {
-		this.reductionGraphs.push(new ReductionGraph(getParentPolicySet()));
+		if (getParentPolicySet() != null) {
+			this.reductionGraphs.push(new ReductionGraph(getParentPolicySet()));
+		}
 	}
 
 	/**
