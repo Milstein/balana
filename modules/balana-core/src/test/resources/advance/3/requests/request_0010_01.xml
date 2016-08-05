@@ -33,8 +33,8 @@
                 <ak:user>
                     <ak:userid>578918b9bcbb29090c4278e3</ak:userid>
                     <ak:fullname>Computer Science Dean</ak:fullname>
-                    <ak:workemail>csdean@gmail.com</ak:workemail>
-                    <ak:department>Computer Science</ak:department>
+                    <ak:workemail>cedean@gmail.com</ak:workemail>
+                    <ak:department>Computer Engineering</ak:department>
                     <ak:positiontitle>Dean</ak:positiontitle>
                 </ak:user>
                 <ak:user>
@@ -55,7 +55,7 @@
     </Attributes>
     <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
         <Attribute IncludeInResult="false" AttributeId="urn:oasis:names:tc:xacml:1.0:action:proposal.action">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Approve</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Disapprove</AttributeValue>
         </Attribute>
     </Attributes>
 </Request>

@@ -140,7 +140,6 @@ public class AdvanceTestV3 extends TestCase {
 	// }
 	// }
 
-	//
 	// public void testBasicTest0007() throws Exception {
 	//
 	// String reqResNo;
@@ -282,7 +281,7 @@ public class AdvanceTestV3 extends TestCase {
 		policies.add("TestPolicy_0010.xml");
 		log.info("Advance Test 0010 is started. This test is for Jira COMMONS-97");
 
-		for (int i = 1; i < 2; i++) {
+		for (int i = 1; i < 3; i++) {
 
 			if (i < 10) {
 				reqResNo = "0" + i;
