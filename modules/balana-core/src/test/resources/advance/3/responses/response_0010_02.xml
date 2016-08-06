@@ -25,10 +25,11 @@
 		</Status>
 		<AssociatedAdvice>
 			<Advice AdviceId="userDetails">
-				<AttributeAssignment AttributeId="userfullName" DataType="http://www.w3.org/2001/XMLSchema#string">Computer Science Associate Chair</AttributeAssignment>
 				<AttributeAssignment AttributeId="userId" DataType="http://www.w3.org/2001/XMLSchema#string">578918b9bcbb29090c4278e7</AttributeAssignment>
-				<AttributeAssignment AttributeId="userPositionTitle" DataType="http://www.w3.org/2001/XMLSchema#string">Associate Chair</AttributeAssignment>
+				<AttributeAssignment AttributeId="userfullName" DataType="http://www.w3.org/2001/XMLSchema#string">Computer Science Associate Chair</AttributeAssignment>
+				<AttributeAssignment AttributeId="userEmail" DataType="http://www.w3.org/2001/XMLSchema#string">csassociatechair@gmail.com</AttributeAssignment>
 				<AttributeAssignment AttributeId="userDepartment" DataType="http://www.w3.org/2001/XMLSchema#string">Computer Science</AttributeAssignment>
+				<AttributeAssignment AttributeId="userPositionTitle" DataType="http://www.w3.org/2001/XMLSchema#string">Associate Chair</AttributeAssignment>
 			</Advice>
 		</AssociatedAdvice>
 	</Result>
