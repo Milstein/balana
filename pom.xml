@@ -79,7 +79,7 @@
     <properties>
         <balana.version>1.0.5-SNAPSHOT</balana.version>
         <commons-logging.version>1.2</commons-logging.version>
-        <junit.version>4.8.2</junit.version>
+        <junit.version>4.13.1</junit.version>
         <imp.pkg.version.javax.xml>[0.0.0,1.0.0)</imp.pkg.version.javax.xml>
         <exp.pkg.version.balana>${balana.version}</exp.pkg.version.balana>
         <imp.pkg.version.balana>${balana.version}</imp.pkg.version.balana>
